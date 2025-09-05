@@ -63,7 +63,7 @@ export default function Portfolio() {
               Desenvolvedor & <span className="text-primary">Artista</span>
             </h1>
             <p className="mt-6 text-xl text-muted-foreground text-balance max-w-2xl mx-auto">
-              Estudante de programação apaixonado por tecnologia e música. Criando experiências digitais e expressões
+              Olá! eu sou um estudante de programação apaixonado por tecnologia e música. Neste site eu juntei minhas paixões criando experiências digitais e expressões
               artísticas.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -88,7 +88,7 @@ export default function Portfolio() {
                     </CardTitle>
                     <CardDescription className="text-base">
                       Estudante focado em desenvolvimento web moderno, criando aplicações funcionais, rápidas e
-                      responsivas
+                      dinâmicas
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
@@ -133,27 +133,6 @@ export default function Portfolio() {
                           VS Code
                         </Badge>
                       </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-3 text-primary">Aprendendo</h4>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="outline" className="border-primary/50 text-muted-foreground">
-                          Python
-                        </Badge>
-                        <Badge variant="outline" className="border-primary/50 text-muted-foreground">
-                          PostgreSQL
-                        </Badge>
-                        <Badge variant="outline" className="border-primary/50 text-muted-foreground">
-                          Docker
-                        </Badge>
-                        <Badge variant="outline" className="border-primary/50 text-muted-foreground">
-                          AWS
-                        </Badge>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
 
               <Card className="border-border/50">
                 <CardHeader>

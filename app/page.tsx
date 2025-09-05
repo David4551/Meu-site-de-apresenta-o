@@ -63,7 +63,7 @@ export default function Portfolio() {
               Desenvolvedor & <span className="text-primary">Artista</span>
             </h1>
             <p className="mt-6 text-xl text-muted-foreground text-balance max-w-2xl mx-auto">
-              Olá! eu sou um estudante de programação apaixonado por tecnologia e música. Neste site eu juntei minhas paixões criando experiências digitais e expressões
+              Olá! Sou um estudante de programação apaixonado por tecnologia e música. Neste site, eu juntei minhas paixões criando experiências digitais e expressões
               artísticas.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">

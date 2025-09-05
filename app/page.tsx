@@ -188,7 +188,7 @@ export default function Portfolio() {
             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-1 max-w-md mx-auto">
               {/* Card transformado em link */}
               <a
-                href="https://seudominio.com"
+                href="https://meu-site-de-apresenta-o.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >

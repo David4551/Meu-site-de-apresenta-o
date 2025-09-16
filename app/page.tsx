@@ -118,12 +118,6 @@ export default function Portfolio() {
                           <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
                             React
                           </Badge>
-                          <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
-                            Next.js
-                          </Badge>
-                          <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
-                            Tailwind CSS
-                          </Badge>
                         </div>
                       </div>
                       <div>
@@ -146,23 +140,6 @@ export default function Portfolio() {
                           </Badge>
                           <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
                             VS Code
-                          </Badge>
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold mb-3 text-primary">Aprendendo</h4>
-                        <div className="flex flex-wrap gap-2">
-                          <Badge variant="outline" className="border-primary/50 text-muted-foreground">
-                            Python
-                          </Badge>
-                          <Badge variant="outline" className="border-primary/50 text-muted-foreground">
-                            PostgreSQL
-                          </Badge>
-                          <Badge variant="outline" className="border-primary/50 text-muted-foreground">
-                            Docker
-                          </Badge>
-                          <Badge variant="outline" className="border-primary/50 text-muted-foreground">
-                            AWS
                           </Badge>
                         </div>
                       </div>

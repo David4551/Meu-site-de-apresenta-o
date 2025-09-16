@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -7,6 +8,33 @@ import { Github, Linkedin, Mail, Music, Code, ExternalLink, Play } from "lucide-
 import Image from "next/image"
 
 export default function Portfolio() {
+  const [status, setStatus] = useState("")
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setStatus("loading")
+
+    const form = e.target
+    const data = new FormData(form)
+
+    try {
+      const response = await fetch("https://formspree.io/f/xzzaldzb", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      })
+
+      if (response.ok) {
+        setStatus("success")
+        form.reset()
+      } else {
+        setStatus("error")
+      }
+    } catch {
+      setStatus("error")
+    }
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col items-center">
       {/* Header */}
@@ -216,25 +244,32 @@ export default function Portfolio() {
           <h2 className="font-mono text-3xl font-bold text-center mb-12">Entre em Contato</h2>
           <Card className="border-border/50">
             <CardContent className="p-6">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="text-sm font-medium mb-2 block">Nome</label>
-                    <Input id="name" placeholder="Seu nome" />
+                    <Input id="name" name="name" placeholder="Seu nome" required />
                   </div>
                   <div>
                     <label htmlFor="email" className="text-sm font-medium mb-2 block">Email</label>
-                    <Input id="email" type="email" placeholder="seu@email.com" />
+                    <Input id="email" name="email" type="email" placeholder="seu@email.com" required />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="message" className="text-sm font-medium mb-2 block">Mensagem</label>
-                  <Textarea id="message" placeholder="Sua mensagem..." className="min-h-[120px]" />
+                  <Textarea id="message" name="message" placeholder="Sua mensagem..." className="min-h-[120px]" required />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full" disabled={status === "loading"}>
                   <Mail className="h-4 w-4 mr-2" />
-                  Enviar Mensagem
+                  {status === "loading" ? "Enviando..." : "Enviar Mensagem"}
                 </Button>
+
+                {status === "success" && (
+                  <p className="text-green-600 mt-4 text-center">✅ Mensagem enviada com sucesso!</p>
+                )}
+                {status === "error" && (
+                  <p className="text-red-600 mt-4 text-center">❌ Ocorreu um erro. Tente novamente.</p>
+                )}
               </form>
             </CardContent>
           </Card>
